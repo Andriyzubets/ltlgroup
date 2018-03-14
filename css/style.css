@@ -1,0 +1,522 @@
+* {
+	margin: 0;
+	padding: 0;
+	transition: all .2s;
+}
+body {
+	font: 0.7em/1.6 'Montserrat', sans-serif;
+	color: #8a8c8f;
+}
+a {
+	text-decoration: none;
+	color:  #8a8c8f;
+}
+.header {
+	padding: 30px 0 0;
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+}
+.header .logo {
+	width: 150px;
+	height: 60px;
+	background: url(../img/logo.png) 50% no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	margin: 0 0 0 20px;
+	cursor: pointer;
+}
+.header .logo:hover {
+	transition: .2s;
+	opacity: .6;
+}
+.header .main-menu {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	width: calc(100% - 350px);
+	-ms-align-items: center;
+	align-items: center;
+	text-align: center;
+}
+.header .main-menu li {
+	padding: 0 8px;
+	line-height: 2em;
+}
+.header .main-menu li:before {
+	content: "";
+	display: block;
+	position: relative;
+	height: 1em;
+	width: 0;
+	background: #ffd6d6ad;
+	transform: translate(0,21px);
+	z-index: -1;
+}
+.header .main-menu li:hover:before {
+	transition: .3S;
+	width: 90%;
+}
+.header .main-menu li:first-child:before {
+	content: "";
+	display: block;
+	position: relative;
+	height: 1em;
+	width: 90%;
+	background: #ffd6d6ad;
+	transform: translate(0,21px);
+	z-index: -1;
+}
+.header .login {
+	width: 50px;
+	margin: 0 20px 15px;
+	padding: 5px 10px;
+	background: #ee4b41;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 10px;
+	box-shadow: 0 0 10px #ccc;
+	cursor: pointer;
+}
+.header .login:hover {
+	transition: all .4s;
+	background: #fff;
+	color: #ee4b41;
+	transform: scale(1.05);
+	box-shadow: 0 0 5px #000;
+}
+.slider {
+	width: 100%;
+	padding: 60px 0;
+	filter: grayscale(1);
+	display: none;
+}
+.slider1 {
+	background: url(../img/header-layer.jpg) 100% no-repeat;
+	-webkit-background-size: 70%;
+	background-size: 70%;
+}
+.slider2 {
+	background: url(../img/header-layer-1.jpg) 100% no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.slider:hover {
+	transition: .2s;
+	filter: grayscale(0);
+}
+.slider .wrap {
+	width: 50%;
+	padding: 0 0 0 60px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+h1 {
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	text-shadow: 0 0 3px #fff;
+}
+.slider p {
+	margin: 5% 0;
+	font-size: 24px;
+}
+.slider a {
+	font-size: 18px;
+	width: 30%;
+}
+.slider a:before {
+	content: "";
+	display: block;
+	position: relative;
+	height: 1em;
+	width: 0;
+	background: #ffd6d6ad;
+	transform: translate(0,21px);
+	z-index: -1;
+}
+.slider a:hover:before {
+	transition: .3S;
+	width: 70%;
+}
+.separator {
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: 100;
+	background: #e4e4e4;
+}
+.capabilities {
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.capabilities .item {
+	width: calc(100%/4);
+	height: calc((100vh - 60px) /3);
+	text-decoration: none;
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+	filter: grayscale(1);
+	transition: .4s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.capabilities .item p, .capabilities .item span {
+	transition: .4s;
+	opacity: 0;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.capabilities .item .description {
+	-ms-align-self: flex-start;
+	align-self: flex-start;
+	margin: 50px 0 10px 10px;
+}
+.capabilities .item h4 {
+	transition: .4s;
+	font-size: 14px;
+	letter-spacing: 1px;
+	margin: 0 10px 10px;
+	text-transform: uppercase;
+}
+.item.study {
+	background: url(../img/temp-lay.jpg) 0% 0% no-repeat;
+}
+.item.audit {
+	background: url(../img/temp-lay.jpg) 100% 0 no-repeat;
+}
+.item.lean {
+	background: url(../img/temp-lay.jpg) 50% 100% no-repeat;
+}
+.item.consalting {
+	background: url(../img/temp-lay.jpg) 50%no-repeat;
+}
+.item.decisions {
+	background: url(../img/temp-lay.jpg) 75% no-repeat;
+}
+.item.choose {
+	background: url(../img/temp-lay.jpg) 30% 50% no-repeat;
+}
+.item.techConsult {
+	background: url(../img/temp-lay.jpg) 70% 0% no-repeat;
+}
+.item.news {
+	background: url(../img/temp-lay.jpg) 0 100% no-repeat;
+}
+.item.colors {
+	background: url(../img/temp-lay.jpg) 20% 50% no-repeat;
+}
+.item.trends {
+	background: url(../img/temp-lay.jpg) 20% 0% no-repeat;
+}
+.item.publications {
+	background: url(../img/temp-lay.jpg) 70% 100% no-repeat;
+}
+.item.individual {
+	background: url(../img/temp-lay.jpg) 70% 30% no-repeat;
+}
+.capabilities .item:hover {
+	filter: grayscale(0);
+	background-position: 50%;
+}
+.capabilities .item:hover p, .capabilities .item:hover span {
+	opacity: 1;
+	
+}
+.capabilities .item:hover h4 {
+	opacity: 0.3;
+}
+.popup {
+	transition: all .4s;
+	position: fixed;
+	width: 70vw;
+	top: 25%;
+	min-height: 300px;
+	background: #fff;
+	z-index: 10;
+	font-size: 24px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+.back-font {
+	position: fixed;
+	transition: all .4s;
+	background: #000000d1;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9;
+	top: 0;
+}
+
+/* slider */
+.faqs{
+	width: 100%;
+	max-width: 1045px;
+	position: relative;
+	padding-top: 180px;
+	margin: 0px auto 100px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/*Last thing remaining is to add transitions*/
+.faqs>.img{
+	position: absolute;
+	left: 0; top: 0;
+	transition: all 0.4s;
+}
+.faqs>.img p {
+	color: #000;
+	font-weight: 100;
+	letter-spacing: .5px;
+	text-align: right;
+}
+
+.faqs input[name='slide_switch'] {
+	display: none;
+}
+
+.faqs label {
+	/*Lets add some spacing for the thumbnails*/
+	margin: 0 0 0 18px;
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	opacity: 0.6;
+	width: 15%;
+	height: 140px;
+	text-align: center;
+}
+
+.faqs label p{
+	margin: 140px 0 0;
+}
+
+/*Time to add the click effects*/
+.faqs input[name='slide_switch']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.faqs input[name='slide_switch'] ~ .img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.faqs input[name='slide_switch']:checked+label+.img {
+	opacity: 1;
+	width: 73%;
+	padding: 30px 0;
+	/*height: 320px;*/
+
+	transform: translate(20%,0);
+}
+.faqs .id1 {
+	background: url(../img/person-test.png) 50% no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+/* site map */
+.site-map {
+	background: #e4e4e4;
+
+}
+
+.site-map .wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+	max-width: 1045px;
+	width: 100%;
+	margin: 0 auto;
+}
+.site-map .wrap a, .footer a {
+	font-size: 18px;
+	line-height: 1.5em;
+	letter-spacing: 1px;
+}
+.site-map .wrap a:hover, .footer a:hover {
+	transition: .3s;
+	opacity: .6;
+}
+.site-map .wrap .sub {
+	margin: 0 0 0 20px;
+}
+.site-map .wrap .sub:before {
+	content: "+";
+	display: block;
+	position: absolute;
+	transform: translate(-20px,6px);
+	font-size: 15px;
+	border: 1px solid;
+	width: 13px;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+}
+.map {
+	height: 400px;
+}
+.map iframe {
+	filter: grayscale(1);
+}
+.map iframe:hover {
+	filter: grayscale(0);
+}
+.footer {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1045px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 0 10px;
+
+}
+.footer >div {
+	width: 30%;
+}
+.footer li {
+	font-size: 16px;
+	line-height: 1.5;
+}
+.footer .contacts .social {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	-ms-align-items: center;
+	align-items: center;
+}
+.footer .contacts .social a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: #ccc;
+	margin-right: 15px;
+}
+.footer .contacts .social .fb {
+	background: url(../img/facebook-logo_black.png) 50% no-repeat;
+
+}
+.footer .contacts .social .ins {
+	background: url(../img/instagram_logo-black.png) 50% no-repeat;
+	
+}
+.footer .contacts .social .tele {
+	background: url(../img/telegram-black.png) 50% no-repeat;
+	
+}
+.footer .contacts .social .goo {
+	background: url(../img/google_plus-black.png) 50% no-repeat;
+	
+}
+.footer-form {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.footer-form .name, .footer-form .message {
+	width: 100%;
+}
+.footer-form .tel, .footer-form .mail {
+	width: 49%;
+}
+.footer-form input, .footer-form textarea {
+	width: calc(100% - 20px);
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	padding: 5px 10px;
+	margin: 0 0 10px;
+}
+.footer-form input:focus, .footer-form textarea:focus {
+	outline: none;
+}
+.footer-form textarea {
+	min-height: 50px;
+}
+.footer-form .def-button {
+	width: 150px;
+
+	padding: 5px 10px;
+	background: #ee4b41;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 10px;
+	box-shadow: 0 0 10px #ccc;
+	cursor: pointer;
+}
+.footer-form .def-button:hover {
+	transition: all .4s;
+	background: #fff;
+	color: #ee4b41;
+	transform: scale(1.05);
+	box-shadow: 0 0 5px #000;
+}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+.footer .copyright {
+	text-align: center;
+}
+.footer .logo {
+	display: block;
+	width: 100%;
+	height: 100px;
+	background: url(../img/logo.png) 50% no-repeat;
+}

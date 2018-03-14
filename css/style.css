@@ -158,7 +158,8 @@ h1 {
 	font-size: 22px;
 	text-transform: uppercase;
 	font-weight: 100;
-	background: #e4e4e4;
+	    background: #404040;
+    color: #fff;
 }
 .capabilities {
 	width: 100%;
@@ -353,7 +354,7 @@ On click the images will be displayed at normal size to complete the effect
 
 /* site map */
 .site-map {
-	background: #e4e4e4;
+
 
 }
 

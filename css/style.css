@@ -481,6 +481,7 @@ On click the images will be displayed at normal size to complete the effect
 	border-top: none;
 	padding: 5px 10px;
 	margin: 0 0 10px;
+	font-size: 14px
 }
 .footer-form input:focus, .footer-form textarea:focus {
 	outline: none;
@@ -507,6 +508,7 @@ On click the images will be displayed at normal size to complete the effect
 	transform: scale(1.05);
 	box-shadow: 0 0 5px #000;
 }
+
 :focus::-webkit-input-placeholder {color: transparent}
 :focus::-moz-placeholder          {color: transparent}
 :focus:-moz-placeholder           {color: transparent}

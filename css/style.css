@@ -36,6 +36,98 @@ a {
 	transition: .2s;
 	opacity: .6;
 }
+/* сендвич */
+#nav-toggle {
+	position: fixed;
+	top: 15px;
+	right: 35px;
+	display: inline-block;
+	width: 35px;
+	height: 25px;
+	z-index: 15;
+}
+#nav-toggle span { 
+	position: absolute; 
+	left: 0; 
+	top: 10px; 
+}
+
+#nav-toggle span, 
+#nav-toggle span:before,
+#nav-toggle span:after {
+	position: absolute;
+	display: block;
+	content: '';
+	height: 5px;
+	width: 35px;
+	background: #000;
+	border-radius: 1px;
+	cursor: pointer;
+}
+#nav-toggle span:before {
+	top: -10px;
+}
+#nav-toggle span:after {
+	bottom: -10px; 
+}
+
+/* Добавим анимацию всех свойств для блоков нашей иконки */
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+	transition: all 500ms ease-in-out;
+}
+
+/* Центральный блок делаем прозрачным */
+#nav-toggle.active span {
+	background-color: transparent;
+}
+
+/* Смещаем псевдо-элементы в центр иконки (на место основного блока) */
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+	top: 0;
+}
+
+/* Наклоняем псевдо-элементы под углом 45 градусов, но в разные стороны */
+#nav-toggle.active span:before {
+	transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+	transform: rotate(-45deg);
+}
+/* конец сендвича*/
+.header .smart-menu {
+	width: 250px;
+	height: 100vh;
+	background: #474038eb;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	padding: 100px 0 0 100px;	
+	transition: all .4s;
+}
+.header .smart-menu a {
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.5em;
+	letter-spacing: 1px;
+	transition: all .2s;
+	display: inline-block;
+}
+.header .smart-menu a:before {
+	content: "";
+	display: block;
+	position: relative;
+	height: 1px;
+	background: #fff;
+	width: 0;
+	transform: translate(0,20px);
+	transition: all .4s;
+}
+.header .smart-menu a:hover:before {
+	width: 100%;
+}
+.header .smart-menu a:hover {
+	opacity: .8;
+}
 .header .main-menu {
 	display: -webkit-flex;
 	display: -moz-flex;
